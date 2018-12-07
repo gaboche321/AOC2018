@@ -124,14 +124,19 @@ centers.each do |x|
     grid[x] = Area.new(i, 0)
     i += 1
 end
-=begin
+begin
 for i in 1...300
     populate(i,centers,grid)
-    puts i
 end
 
 puts maxArea(grid)
-=end
+end
+grid = Hash.new()
+i = 1
+centers.each do |x|
+    grid[x] = Area.new(i, 0)
+    i += 1
+end
 sum = 0
 for i in 0...500
     for j in 0...500
@@ -146,6 +151,5 @@ for i in 0...500
         end
     end
 end
-printGrid(grid)
 puts sum
 
